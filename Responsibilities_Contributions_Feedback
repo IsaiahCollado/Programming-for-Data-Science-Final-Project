@@ -1,0 +1,77 @@
+Team Responsibilities, Contributions, & Feedback Log
+
+1. Group Information
+
+Group 4
+Members:
+John Christian Ballesteros
+Isaiah S. Collado
+Uno Rayven Timothy Kabiling
+Jeremiah Daniel C. Padilla
+Carlos Gabriel D. Roman
+Project Title: The Analysis of Metro Manila Vehicular Crash Patterns: Area and Demographic Evaluation of MMDA Incident Data
+Repository Link: https://github.com/IsaiahCollado/Programming-for-Data-Science-Final-Project
+
+
+2. Program Component & Responsibility Mapping
+
+| Program Component | Primary Programmer | Primary Reviewer | Component Description / Tasks |
+| Data Acquisition | Isaiah S. Collado | Jeremiah Daniel C. Padilla | Load Kaggle MMDA traffic dataset and Wikipedia LGU dataset using `pandas.read_csv()`. |
+| Data Validation | Carlos Gabriel D. Roman | Isaiah S. Collado | Perform shape, data type, and missing value checks using `df.info()` and `df.isnull()`. |
+| Data Cleaning | Jeremiah Daniel C. Padilla | Carlos Gabriel D. Roman | Strip special characters, parse datetime strings, and clean text strings. |
+| Data Integration | Jeremiah Daniel C. Padilla | Uno Rayven Timothy Kabiling | Perform dataframe merge operations on standard `City` name keys. |
+| Data Analysis | Carlos Gabriel D. Roman | Isaiah S. Collado | Compute numerical aggregations, `groupby()` metrics, and density ratios. |
+| Visualization | Uno Rayven Timothy Kabiling | John Christian Ballesteros | Generate multi-panel Matplotlib and Seaborn figures and temporal charts. |
+| Testing & Reliability | John Christian Ballesteros | Uno Rayven Timothy Kabiling | Implement `assert` statements, merge integrity checks, and validation logic. |
+| Execution & Notebook | Jeremiah Daniel C. Padilla | Carlos Gabriel D. Roman | Maintain top-to-bottom clean execution and notebook pipeline formatting. |
+
+
+3. Individual Member Contributions Log
+
+Isaiah S. Collado
+Assigned Role: Acquisition Lead & Validation Reviewer
+Initial Contributions (Week 8 Check-in):
+  * Created and initialized the team's central GitHub repository.
+  * Configured data loading scripts using `pd.read_csv()` for `data_mmda_traffic_spatial.csv` and `metro_manila_local_government.csv`.
+  * Co-authored and reviewed dataset validation parameters and initial shape checks.
+
+Carlos Gabriel D. Roman
+Assigned Role: Validation Lead & Analysis Lead
+Initial Contributions (Week 8 Check-in):
+  * Evaluated dataset schema, shape, data types, and missing values.
+  * Identified missing value counts in `Direction` (857) and `Lanes_Blocked` (687).
+  * Formulated analytical logic connecting dataset variables to urban density and crash risk questions.
+
+Jeremiah Daniel C. Padilla
+Assigned Role: Cleaning Lead, Integration Lead, & Execution Lead
+Initial Contributions (Week 8 Check-in):
+  * Defined string mapping rules using `str.replace()` to handle mismatched LGU city names prior to merging.
+  * Drafted missing data handling strategies (imputation vs dropping) for `Lanes_Blocked`.
+  * Structured execution plan and risk mitigations for the project pipeline.
+
+Uno Rayven Timothy Kabiling
+Assigned Role: Visualization Lead & Integration Reviewer
+Initial Contributions (Week 8 Check-in):
+  * Evaluated visualization requirements for plotting rush hour vs. weekend traffic patterns.
+  * Reviewed string cleaning and integration keys for city matching.
+  * Designed week-by-week project schedule through Week 17.
+
+John Christian Ballesteros
+Assigned Role:** Testing Lead & Visualization Reviewer
+Initial Contributions (Week 8 Check-in):
+  * Co-authored proposal document and check-in presentation materials.
+  * Outlined verification checks (`assert` statements) to ensure post-merge record counts match expectations.
+  * Formulated instructor feedback questions regarding vehicle text categorization (`str.contains()`).
+
+
+
+4. Instructor Check-in 1 Log (Week 8)
+
+Check-in Date: [10/03/2026]
+Instructor Verdict: `[ ] Approved` | `[ ] Approved with Revisions` | `[ ] Revise and Resubmit`
+
+| # | Instructor Question / Feedback Item | Assigned Owner | Agreed Target Date | Resolution / Evidence of Completion |
+| :-: | :--- | :--- | :---: | :--- |
+| 1 | Vehicle Text Categorization (`str.contains()` vs Regex) | J. Padilla | Week 10 | *[Link to GitHub Commit / PR] |
+| 2 | Special Character LGU String Cleaning Strategy | C. Roman | Week 10 | *[Link to GitHub Commit / PR] |
+| 3 | Handling missing `Lanes_Blocked` values (Impute vs Drop) | J. Ballesteros | Week 10 | *[Link to GitHub Commit / PR] |
