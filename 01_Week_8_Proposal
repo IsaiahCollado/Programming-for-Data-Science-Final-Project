@@ -1,7 +1,7 @@
 Group 4: John Christian Ballesteros, Isaiah S. Collado, Uno Rayven Timothy Kabiling, Jeremiah Daniel C. Padilla, Carlos Gabriel D. Roman
 
 Repository link: https://github.com/IsaiahCollado/Programming-for-Data-Science-Final-Project 
-Commit identifier: 9cfa90b
+Commit identifier: 13b87ab
 
 Title: The Analysis of Metro Manila Vehicular Crash Patterns: Area and Demographic Evaluation of MMDA Incident Data
 
@@ -10,9 +10,9 @@ Intended Audience: Metropolitan Manila Development Authority (MMDA)
 Specific Problem: Total Traffic Disruptions and Collision Hazards Across Metro Manila LGUs 
 
 Analytical Questions:
-How do temporal peak windows (rush hour vs. off-peak) and collision densities across Metro Manila cities shift between standard workdays (Monday–Friday) and weekends?
+How do hourly incident frequencies and directional traffic disruptions (Direction) across key cities shift between standard weekday commute hours (morning vs. evening peak) and weekends?
 
-To what degree do differences in urban density explain variations in localized collision rates across Metro Manila LGUs, and which cities deviate most from this trend as high-risk anomalies?"
+How does reported incident density per square kilometer (Total Incidents / Area km2) vary across Metro Manila LGUs, and which cities experience the highest geographic concentration of roadway disruptions?
 
 What proportion of total recorded roadway disruptions in Metro Manila is attributable to vehicular stalls and mechanical failures compared to active collisions, and which specific vehicle categories are most susceptible to operational breakdowns?
 
@@ -38,8 +38,8 @@ Integration Key: City or municipality.
 Inspection: Traffic shape is (17312, 13); LGU is (18, 8). Types are object, float64, int64. No duplicates. Missing values found in Direction (857) and Lanes_Blocked (687).
 
 Variables:
-Q1: Date, Time, City
-Q2: City, City or municipality, Density (per km2)
+Q1: Date, Time, City, Direction
+Q2: City, City or municipality, Density (per km2), Area (km2)
 Q3: Type and Involved
 
 Program Components: (P: Primary Programmer, R: Reviewer)
@@ -74,6 +74,5 @@ Questions for Instructor:
 Is str.contains() sufficient for categorizing the highly irregular vehicle column?
 Should we clean LGU special characters in the CSV or strictly via Python?
 Should we drop or impute rows with missing Lanes_Blocked values?
-
 
 
